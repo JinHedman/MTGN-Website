@@ -1,0 +1,121 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+   background: linear-gradient(60deg, rgb(255, 105, 78, 0.5), rgba(255, 34, 152, 0.5) 70.71%);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}¨
+
+.profile {
+  box-sizing: border-box;
+}
+
+@keyframes moveUp{
+  0% {
+    background-position: -1px -1px, -1px -1px;
+  }
+  100% {
+    background-position: -50px -50px, -1px -1px;
+  }
+}
+
+@keyframes glow {
+  0% {
+    filter: drop-shadow(0 0 6px #CF33D9) drop-shadow(0 0 6px #CF33D9);
+  }
+  50% {
+    filter: drop-shadow(0 0 1px #CF33D9) drop-shadow(0 0 1px #CF33D9);
+  }
+  100% {
+    filter: drop-shadow(0 0 6px #CF33D9) drop-shadow(0 0 6px #CF33D9);
+  }
+}
+
+
+
+.landscape {
+  position: absolute;
+  width: 300%;
+  left: -100%;
+  height: 70%;
+  bottom: -30%;
+  background-image: -webkit-linear-gradient(top, #CF33D9 2px, transparent 2px), -webkit-linear-gradient(left, #CF33D9 2px, transparent 2px);
+  background-size: 50px 50px, 80px 80px;
+  background-position: -1px -1px, -1px -1px;
+  transform: rotateX(85deg);
+  animation: moveUp 1s infinite linear;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0 auto;
+  perspective: 180px;
+  perspective-origin: 50% 40%;
+}
+
+.glow {
+  animation: glow 2.5s linear infinite;
+}
+
+.glowBoarder {
+  position: absolute;
+  top: -50rem;
+}
+
+.profileName {
+  font-family: "Open Sans";
+  color: transparent;
+  position: relative;
+  display: block;
+  -webkit-text-stroke: 2px #F4C6F4;
+  display: inline-block;
+  padding: 0 1px;
+  animation: glow 2.5s linear infinite;
+}
+
+.gradientBackground {
+  background: linear-gradient(0deg, rgba(255, 0, 251, 0.5), rgba(255,0,0,0) 50%),
+            linear-gradient(30deg, rgba(0, 0, 251, 0.5), rgba(0,255,0,0) 35%),
+            linear-gradient(-30deg, rgba(0, 0, 251, 0.5), rgba(0,0,255,0) 35%);
+}
+
+.btn {
+  color: #db2ee4;
+  padding: 0;
+  border: 1px solid #db2ee4;
+  box-shadow: 0 0 5px #db2ee4, 0 0 5px inset;
+}
+/* .btn:after {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 6px;
+  width: 90%;
+  height: 70%;
+  border: 1px solid #db2ee4;
+  box-shadow: 0 0 5px #db2ee4 inset;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.btn:hover:after {
+  opacity: 1;
+} */
+
+.my-custom-class{
+  background-image: linear-gradient(to right, rgb(253, 186, 116), rgb(253, 164, 175));
+}
